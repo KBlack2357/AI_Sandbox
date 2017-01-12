@@ -1,2 +1,2 @@
 # AI_Sandbox
-An artificial sandbox playing in
+An artificial sandbox for playing in
