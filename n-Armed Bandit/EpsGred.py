@@ -28,9 +28,9 @@ if len(epsRange)>5: # don't allow more than 5 epsilon values
     print "eps range is too large"
     sys.exit()
 
-epsLables = [0 for j in range(len(epsRange))] # labels for each epsilon value for the plot
-for i in range(len(epsLables)):
-    epsLables[i] = "eps = %r" %format(epsRange[i], '.2f')
+epsLabels = [0 for j in range(len(epsRange))] # labels for each epsilon value for the plot
+for i in range(len(epsLabels)):
+    epsLabels[i] = "eps = %r" %format(epsRange[i], '.2f')
 
 # specify colors for the plot
 colors = [ 'r', 'b', 'g', 'k', 'm']
@@ -82,7 +82,7 @@ for w in range(len(epsRange)):
         runningMean = np.average(av, weights=np.array([counts[j]/np.sum(counts) for j in range(len(counts))]))
         totalReward += rwd
         plt.scatter(i, runningMean, color= colors[w])
-    plt.scatter(0, 0, label=epsLables[w], color=colors[w]) # these points are only plotted for the plot legend.
+    plt.scatter(0, 0, label=epsLabels[w], color=colors[w]) # these points are only plotted for the plot legend.
     #If I specify a label within the "nPlays for loop" then each point is labeled on the legend. ### kind of a hack work around.
     countArray[w] = counts
     rewardArray[w] = totalReward
