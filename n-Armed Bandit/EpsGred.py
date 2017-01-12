@@ -23,7 +23,7 @@ epsLow = float(epsLow)
 epsHigh = float(epsHigh)
 
 # create epsilon range from the specified high and low boundaries
-epsRange = np.arange(epsLow, epsHigh, 0.05)
+epsRange = np.arange(epsLow, epsHigh, 0.10)
 if len(epsRange)>5: # don't allow more than 5 epsilon values
     print "eps range is too large"
     sys.exit()
